@@ -1,0 +1,237 @@
+/* Outfit Font Family  */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* Young Serif Font Family  */
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors  */
+  --White: hsl(0, 0%, 100%);
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+  --Brown-800: hsl(14, 45%, 36%);
+  --Rose-800: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
+
+  /* Fonts  */
+  --heading-font: "young serif", sans-serif;
+  --para-font: "outfit", sans-serif;
+
+  /* Font Sizes  */
+  --font-size-xxl: 2rem;
+  --font-size-xl: 1.8rem;
+  --font-size-lg: 1.6rem;
+  --font-size-md: 1.3rem;
+  --font-size-base: 1rem;
+  --font-size-sm: 0.91rem;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Stone-100);
+  overflow-x: hidden;
+}
+
+.recipe-page {
+  width: 100%;
+  max-width: 37.5rem;
+  height: auto;
+  background-color: var(--White);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  place-self: center;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  margin: 2rem auto;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.recipe-img {
+  width: 100%;
+  border-radius: 0.6rem;
+}
+
+.about-recipe h1 {
+  font-size: var(--font-size-xl);
+  font-family: var(--heading-font);
+  color: var(--Stone-900);
+  margin-bottom: 1rem;
+}
+
+.about-recipe p {
+  font-family: var(--para-font);
+  color: var(--Stone-600);
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+}
+
+.prep-time {
+  font-family: var(--para-font);
+  background-color: var(--Rose-50);
+  padding: 1rem;
+  border-radius: 0.6rem;
+  line-height: 1.9;
+}
+
+.prep-time h2 {
+  font-size: var(--font-size-md);
+  color: var(--Rose-800);
+}
+
+.prep-time ul li {
+  list-style-position: inside;
+  color: var(--Stone-600);
+  font-size: var(--font-size-sm);
+  padding-left: 1.5rem;
+}
+
+.prep-time ul li strong {
+  padding-left: 1rem;
+}
+.prep-time ul li::marker {
+  color: var(--Rose-800);
+}
+
+.ingredients h2,
+.method h2,
+.benefits h2 {
+  font-family: var(--heading-font);
+  color: var(--Brown-800);
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.ingredients ul {
+  padding-left: 1rem;
+}
+
+.ingredients ul li {
+  line-height: 1.8;
+  list-style-position: inside;
+  font-family: var(--para-font);
+  color: var(--Stone-600);
+  font-size: var(--font-size-sm);
+}
+
+.ingredients ul li::marker {
+  color: var(--Brown-800);
+}
+
+hr {
+  border: none;
+  background-color: var(--Stone-150);
+  height: 0.7px;
+}
+
+.method ol {
+  padding-left: 1.5rem;
+}
+
+.method ol li {
+  padding-left: 1.5rem;
+  line-height: 1.6;
+  font-family: var(--para-font);
+  color: var(--Stone-600);
+  font-size: var(--font-size-sm);
+  margin-bottom: 5px;
+}
+
+.method ol li::marker {
+  color: var(--Brown-800);
+  font-weight: 600;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits p {
+  font-family: var(--para-font);
+  color: var(--Stone-600);
+  font-size: var(--font-size-sm);
+}
+
+.benefits table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.benefits table th,
+.benefits table td {
+  font-family: var(--para-font);
+  color: var(--Stone-600);
+  font-size: var(--font-size-sm);
+  font-weight: normal;
+  text-align: left;
+  padding-left: 1rem;
+  border-bottom: 0.7px solid var(--Stone-150);
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.benefits table td {
+  padding-right: 1rem;
+  color: var(--Brown-800);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .recipe-page {
+    width: 100%;
+    max-width: 42rem;
+    padding: 2rem;
+    margin: 4rem auto;
+  }
+  .about-recipe h1 {
+    font-size: var(--font-size-xxl);
+  }
+  .about-recipe p {
+    font-size: var(--font-size-base);
+  }
+
+  .prep-time h2 {
+    font-size: var(--font-size-md);
+  }
+
+  .ingredients h2,
+  .method h2,
+  .benefits h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  .prep-time ul li,
+  .ingredients ul li,
+  .method ol li,
+  .benefits table tr:last-child td,
+  .benefits table tr:last-child th {
+    font-size: var(--font-size-base);
+  }
+}
+
+.benefits table tr:last-child td,
+.benefits table tr:last-child th {
+  border-bottom: 0;
+}
+
+.attribution {
+  font-size: var(--font-size-sm);
+  color: var(--Stone-600);
+  display: flex;
+  justify-content: center;
+}
+.attribution a {
+  color: var(--Brown-800);
+}
